@@ -11,7 +11,7 @@ const Search = () => {
   const [search, setSearch] = useState(params.query);
 
   const debouncedSearch = useDebouncedCallback(
-    (text: string) => router.setParams({ text }),
+    (text: string) => router.setParams({ query: text }),
     500
   );
 
